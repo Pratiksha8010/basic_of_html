@@ -1,43 +1,37 @@
 <html>
-<body>
-
-<form>
-ENTER NUMBER:
-<input type="text" id="t1" ><br>
-<input type="button" value="okk" onclick="arm()">
-</form>
-</body>
+    <body>
+        ENTER NUMBER:
+        <input type="text" id="t1"><br>
+        PERFET NUMBER:
+        <inptu type="text" id="t2"><br>
+            <input type="button" value="okk" onclick="per()">
+    </body>
 </html>
-
-
 <script>
-function  arm()
-{
- var n=document.getElementById("t1").value;
-n=parseInt(n);
-var n1=n;
- var sum=0;
- var d;
- 
-while(n>0){
-d=n%10;
- sum=sum+d*d*d;
+    function per()
+    {
+        flag=true;
+      var n=document.getElementById ("t1").value;
+     n=parseInt (n);
+     for (i=2;i<n;i++){
+        
 
-n=parseInt(n/10);
-}
-if (n1==sum)
+        if (n%i==0){
+            flag=false;
+            break; 
+    
+     }
+    }
+     if (flag==true)
+          alert("number is  prime ");
+          
+     
+     else 
 
-alert (  " number is arm");
+        alert ("number is not prime");
+     
 
+    }
 
-else 
-
-
-alert (" number is not arm");
-
-
-
-
-}
 
 </script>
