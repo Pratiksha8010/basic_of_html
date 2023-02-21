@@ -1,29 +1,42 @@
 <html>
 <body>
+
 <form>
 ENTER NUMBER:
 <input type="text" id="t1" ><br>
-<input type="button" value="table" onclick="table()">
+<input type="button" value="okk" onclick="arm()">
 </form>
 </body>
 </html>
+
+
 <script>
-function table()
+function  arm()
 {
  var n=document.getElementById("t1").value;
 n=parseInt(n);
+var n1=n;
+ var sum=0;
+ var d;
+ 
+while(n>0){
+d=n%10;
+ sum=sum+d*d*d;
 
-var m=1;
-m=parseInt(m);
-for(i=1;i<=10;i++){
- m=i*n;
-
-
-
-
-document.write("<br>"+m);
-
+n=parseInt(n/10);
 }
+if (n1==sum)
+
+alert (  " number is arm");
+
+
+else 
+
+
+alert (" number is not arm");
+
+
+
 
 }
 
