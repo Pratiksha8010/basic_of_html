@@ -1,31 +1,30 @@
 <html>
 <body>
-    <form>
-    ENTER A STRING:
-    <input type="text" id="t1"><br>
-    TOTAL VOWELS IN STRING:
-    <input type="text" id="t2"><br>
-    <input type="button" value="check" onclick="vowel()">
-    </form>
+<form>
+ENTER NUMBER:
+<input type="text" id="t1" ><br>
+<input type="button" value="table" onclick="table()">
+</form>
 </body>
 </html>
 <script>
-    function vowel()
-    {
- var s1=document.getElementById("t1").value;
-var i;
-var ch=0;
+function table()
+{
+ var n=document.getElementById("t1").value;
+n=parseInt(n);
 
-for (i=0;i<=s1.length;i++){
-    if (s1.charAt(i)=='a'||s1.charAt(i)=='A'||s1.charAt(i)=='e'||s1.charAt(i)=='E'||s1.charAt(i)=='i'||
-    s1.charAt(i)=='I'||s1.charAt(i)=='o'||s1.charAt(i)=='O'||s1.charAt(i)=='u'||s1.charAt(i)=='U')
-    {
-        ch++;
-    }
-    
+var m=1;
+m=parseInt(m);
+for(i=1;i<=10;i++){
+ m=i*n;
+
+
+
+
+document.write("<br>"+m);
+
 }
 
-document.getElementById("t2").value=ch;
+}
 
-    }
 </script>
